@@ -22,8 +22,7 @@
     line-height: 19px;
     list-style: none;
 }
-.weather .temperature {
-    
+.weather .temperature {    
     color: rgb(33, 33, 33);
     font-size: 64px;
     line-height: 64px;
