@@ -3,13 +3,13 @@ import axios from "axios";
 import "./weather.css";
 
 export default function Weather() {
-cons [weatherData, setWeatherData]=useState({ready: false});
+let [weatherData, setWeatherData]=useState({ready: false});
 
 function handleResponse(response) {
 console.log(response.data)
 setWeatherData({
  ready: true,
- temperature: response.data.main,temp,
+ temperature: response.data.main.temp,
  humidity: response.data.main.humidity,
  date: "Wednesday 07:00",
  description: response.data.weather[0].description,
@@ -46,7 +46,7 @@ if(weatherData.ready){
             <div className="col-6">
                 <div className="clearfix">
                     <img src={weatherData.iconUrl}
-                    alt={weather.description}
+                    alt={weatherData.description}
                     className="float-left"></img>
                     
                     <div className="float-left">
