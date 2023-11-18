@@ -13,7 +13,7 @@ return (
 <p>Coded by E Mlambo</p>
          <a
           className="App-link"
-          href="https://github.com/mlameb1/my-app"
+          href="https://github.com/mlameb1/react-week5-work"
           target="_blank"
           rel="noopener noreferrer"
         >
