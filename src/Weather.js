@@ -12,6 +12,7 @@ function handleResponse(response) {
     console.log(response.data)
 setWeatherData({
  ready: true,
+ coordinates: response.data.coord,
  temperature: response.data.main.temp,
  humidity: response.data.main.humidity,
  date: new Date(response.data.dt*1000),
@@ -23,7 +24,7 @@ setWeatherData({
 }
 
 function search(){
-    let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
+    let apiKey = "5293d8454b519c30f6f6331f38c85b4c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 }
@@ -59,7 +60,7 @@ if(weatherData.ready){
                 </div> 
             </form>
             <WeatherInfo data={weatherData}/>
-            <WeatherForecast/>
+            <WeatherForecast coordinates = {weatherData.coordinates}/>
     </div>
     );
 } else{
