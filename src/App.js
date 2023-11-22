@@ -8,7 +8,7 @@ return (
     <div className="App">
       <div className="container">
 
-<Weather/>
+<Weather defaultCity = {"Paris"}/>
 <footer>
 <p>Coded by E Mlambo</p>
          <a
